@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\.net\\osa_4\\Platformer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|c:\\.net\\osa_4\\platformer\\platformer\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|solutionrelative:platformer\\leveldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|c:\\.net\\osa_4\\platformer\\platformer\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|solutionrelative:platformer\\levelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|c:\\.net\\osa_4\\platformer\\platformer\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|solutionrelative:platformer\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|c:\\.net\\osa_4\\platformer\\platformer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|solutionrelative:platformer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|c:\\.net\\osa_4\\platformer\\platformer\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|solutionrelative:platformer\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|c:\\.net\\osa_4\\platformer\\platformer\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|solutionrelative:platformer\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|c:\\.net\\osa_4\\platformer\\platformer\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|solutionrelative:platformer\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|c:\\.net\\osa_4\\platformer\\platformer\\level1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{79B2512F-AAB8-4488-B729-4D1A4DAAFF2A}|Platformer\\Platformer.csproj|solutionrelative:platformer\\level1.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "level1.json",
+              "DocumentMoniker": "C:\\.net\\osa_4\\Platformer\\Platformer\\level1.json",
+              "RelativeDocumentMoniker": "Platformer\\level1.json",
+              "ToolTip": "C:\\.net\\osa_4\\Platformer\\Platformer\\level1.json",
+              "RelativeToolTip": "Platformer\\level1.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-17T13:46:43.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LevelLoader.cs",
+              "DocumentMoniker": "C:\\.net\\osa_4\\Platformer\\Platformer\\LevelLoader.cs",
+              "RelativeDocumentMoniker": "Platformer\\LevelLoader.cs",
+              "ToolTip": "C:\\.net\\osa_4\\Platformer\\Platformer\\LevelLoader.cs",
+              "RelativeToolTip": "Platformer\\LevelLoader.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T11:00:43.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LevelData.cs",
+              "DocumentMoniker": "C:\\.net\\osa_4\\Platformer\\Platformer\\LevelData.cs",
+              "RelativeDocumentMoniker": "Platformer\\LevelData.cs",
+              "ToolTip": "C:\\.net\\osa_4\\Platformer\\Platformer\\LevelData.cs",
+              "RelativeToolTip": "Platformer\\LevelData.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAuwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-13T10:59:42.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\.net\\osa_4\\Platformer\\Platformer\\Enemy.cs",
+              "RelativeDocumentMoniker": "Platformer\\Enemy.cs",
+              "ToolTip": "C:\\.net\\osa_4\\Platformer\\Platformer\\Enemy.cs",
+              "RelativeToolTip": "Platformer\\Enemy.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T11:24:31.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameState.cs",
+              "DocumentMoniker": "C:\\.net\\osa_4\\Platformer\\Platformer\\GameState.cs",
+              "RelativeDocumentMoniker": "Platformer\\GameState.cs",
+              "ToolTip": "C:\\.net\\osa_4\\Platformer\\Platformer\\GameState.cs",
+              "RelativeToolTip": "Platformer\\GameState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T11:33:58.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\.net\\osa_4\\Platformer\\Platformer\\Player.cs",
+              "RelativeDocumentMoniker": "Platformer\\Player.cs",
+              "ToolTip": "C:\\.net\\osa_4\\Platformer\\Platformer\\Player.cs",
+              "RelativeToolTip": "Platformer\\Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T11:20:34.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameObject.cs",
+              "DocumentMoniker": "C:\\.net\\osa_4\\Platformer\\Platformer\\GameObject.cs",
+              "RelativeDocumentMoniker": "Platformer\\GameObject.cs",
+              "ToolTip": "C:\\.net\\osa_4\\Platformer\\Platformer\\GameObject.cs",
+              "RelativeToolTip": "Platformer\\GameObject.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwCcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T11:20:00.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\.net\\osa_4\\Platformer\\Platformer\\Program.cs",
+              "RelativeDocumentMoniker": "Platformer\\Program.cs",
+              "ToolTip": "C:\\.net\\osa_4\\Platformer\\Platformer\\Program.cs",
+              "RelativeToolTip": "Platformer\\Program.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAwHkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T11:14:24.806Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
