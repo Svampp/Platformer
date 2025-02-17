@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Numerics;
 using Raylib_CsLo;
 using System.Collections.Generic;
@@ -13,7 +14,13 @@ public static class LevelLoader
         {
             string json = File.ReadAllText(filePath);
             Console.WriteLine("Loaded JSON: " + json);
-            LevelData levelData = JsonSerializer.Deserialize<LevelData>(json);
+
+            var options = new JsonSerializerOptions
+            {
+                Converters = { new Vector2Converter(), new ColorConverter() }
+            };
+
+            LevelData levelData = JsonSerializer.Deserialize<LevelData>(json, options);
 
             if (levelData == null)
             {
@@ -80,7 +87,7 @@ public static class LevelLoader
             float speed = data.Speed;
             float moveRange = data.MoveRange;
 
-            enemies.Add(new Enemy(position, size, color, speed, moveRange)); // Создаем Enemy
+            enemies.Add(new Enemy(position, size, color, speed, moveRange));
             Console.WriteLine($"Enemy created at {position} with speed {speed} and move range {moveRange}");
         }
         return enemies;

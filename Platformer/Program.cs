@@ -1,5 +1,6 @@
 ﻿using Raylib_CsLo;
 using System.Numerics;
+using System.Collections.Generic;
 
 /// <summary>
 /// The main program class for the 2D Platformer game.
@@ -39,7 +40,6 @@ class Program
 
         float levelWidth = 1920;
         float levelHeight = 1080;
-
 
         while (!Raylib.WindowShouldClose())
         {
@@ -117,9 +117,12 @@ class Program
                     player = new Player(new Vector2(100, 350));
                     collectedCount = 0;
 
-                    // Logic for loading next level (currently commented out)
-                    // currentLevel++;
-                    // LoadNextLevel(currentLevel);
+                    // Reload level data
+                    levelData = LevelLoader.LoadLevel("level1.json");
+                    platforms = LevelLoader.CreatePlatforms(levelData.Platforms);
+                    collectibles = LevelLoader.CreateCollectibles(levelData.Collectibles);
+                    enemies = LevelLoader.CreateEnemies(levelData.Enemies);
+                    totalCollectibles = collectibles.Count;
                 }
             }
             Raylib.EndDrawing();

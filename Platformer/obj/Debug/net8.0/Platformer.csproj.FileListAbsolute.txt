@@ -25,3 +25,4 @@ C:\.net\osa_4\Platformer\Platformer\obj\Debug\net8.0\refint\Platformer.dll
 C:\.net\osa_4\Platformer\Platformer\obj\Debug\net8.0\Platformer.pdb
 C:\.net\osa_4\Platformer\Platformer\obj\Debug\net8.0\Platformer.genruntimeconfig.cache
 C:\.net\osa_4\Platformer\Platformer\obj\Debug\net8.0\ref\Platformer.dll
+C:\.net\osa_4\Platformer\Platformer\obj\Debug\net8.0\Platformer.sourcelink.json
