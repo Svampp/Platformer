@@ -24,9 +24,11 @@ class Program
 
         Screen currentScreen = Screen.Menu;
         GameState gameState = GameState.Playing;
+        string collisionMessage = "";
+        int currentLevel = 1;
 
         // Load level data
-        LevelData levelData = LevelLoader.LoadLevel("level1.json");
+        LevelData levelData = LevelLoader.LoadLevel($"level{currentLevel}.json");
         List<GameObject> platforms = LevelLoader.CreatePlatforms(levelData.Platforms);
         List<GameObject> collectibles = LevelLoader.CreateCollectibles(levelData.Collectibles);
         List<Enemy> enemies = LevelLoader.CreateEnemies(levelData.Enemies);
@@ -84,7 +86,7 @@ class Program
             else if (currentScreen == Screen.Playing)
             {
                 // Update game state
-                gameState = player.Update(platforms, collectibles, enemies, ref collectedCount, totalCollectibles);
+                gameState = player.Update(platforms, collectibles, enemies, ref collectedCount, totalCollectibles, out collisionMessage);
                 foreach (var enemy in enemies) enemy.Update();
 
                 Raylib.BeginMode2D(camera);
@@ -97,6 +99,12 @@ class Program
                 // Display collected items
                 Raylib.DrawText($"Collected: {collectedCount} / {totalCollectibles}", 20, 20, 30, Raylib.BLACK);
 
+                // Display collision message
+                if (!string.IsNullOrEmpty(collisionMessage))
+                {
+                    Raylib.DrawText(collisionMessage, screenWidth / 2 - Raylib.MeasureText(collisionMessage, 20) / 2, screenHeight - 50, 20, Raylib.RED);
+                }
+
                 if (gameState != GameState.Playing)
                     currentScreen = Screen.GameOver;
             }
@@ -104,7 +112,9 @@ class Program
             {
                 // Display game over or victory message
                 string message = gameState == GameState.Won ? "YOU WON!" : "GAME OVER";
-                Raylib.DrawText(message, screenWidth / 2 - 100, screenHeight / 3, 50, Raylib.RED);
+                Color messageColor = gameState == GameState.Won ? Raylib.GREEN : Raylib.RED;
+                int messageWidth = Raylib.MeasureText(message, 50);
+                Raylib.DrawText(message, (screenWidth - messageWidth) / 2, screenHeight / 3, 50, messageColor);
                 Rectangle restartButton = new Rectangle(screenWidth / 2 - 100, screenHeight / 2, 200, 50);
                 Raylib.DrawRectangleRec(restartButton, Raylib.LIGHTGRAY);
                 Raylib.DrawText("Main Menu", (int)restartButton.x + 20, (int)restartButton.y + 10, 30, Raylib.BLACK);
@@ -116,13 +126,25 @@ class Program
                     currentScreen = Screen.Menu;
                     player = new Player(new Vector2(100, 350));
                     collectedCount = 0;
+                    collisionMessage = "";
 
                     // Reload level data
-                    levelData = LevelLoader.LoadLevel("level1.json");
+                    levelData = LevelLoader.LoadLevel($"level{currentLevel}.json");
                     platforms = LevelLoader.CreatePlatforms(levelData.Platforms);
                     collectibles = LevelLoader.CreateCollectibles(levelData.Collectibles);
                     enemies = LevelLoader.CreateEnemies(levelData.Enemies);
                     totalCollectibles = collectibles.Count;
+
+                    // Logic for loading next level 
+                    // if (gameState == GameState.Won)
+                    // {
+                    //     currentLevel++;
+                    //     levelData = LevelLoader.LoadLevel($"level{currentLevel}.json");
+                    //     platforms = LevelLoader.CreatePlatforms(levelData.Platforms);
+                    //     collectibles = LevelLoader.CreateCollectibles(levelData.Collectibles);
+                    //     enemies = LevelLoader.CreateEnemies(levelData.Enemies);
+                    //     totalCollectibles = collectibles.Count;
+                    // }
                 }
             }
             Raylib.EndDrawing();
