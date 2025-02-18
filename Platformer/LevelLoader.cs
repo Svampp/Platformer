@@ -6,8 +6,19 @@ using System.Numerics;
 using Raylib_CsLo;
 using System.Collections.Generic;
 
+/// <summary>
+/// Provides functionality to load and create game levels, platforms, collectibles, and enemies from JSON data.
+/// </summary>
 public static class LevelLoader
 {
+    /// <summary>
+    /// Loads level data from a JSON file located at the specified file path.
+    /// </summary>
+    /// <param name="filePath">The path to the JSON file containing the level data.</param>
+    /// <returns>A <see cref="LevelData"/> object representing the deserialized level data.</returns>
+    /// <exception cref="FileNotFoundException">Thrown when the specified file path does not exist.</exception>
+    /// <exception cref="JsonException">Thrown when there is an error during JSON deserialization.</exception>
+    /// <exception cref="Exception">Thrown when an unexpected error occurs during the loading process.</exception>
     public static LevelData LoadLevel(string filePath)
     {
         try
@@ -46,6 +57,11 @@ public static class LevelLoader
         }
     }
 
+    /// <summary>
+    /// Creates a list of <see cref="GameObject"/> instances representing platforms based on the provided platform data.
+    /// </summary>
+    /// <param name="platformData">A list of <see cref="PlatformData"/> objects containing the platform definitions.</param>
+    /// <returns>A list of <see cref="GameObject"/> instances representing the platforms.</returns>
     public static List<GameObject> CreatePlatforms(List<PlatformData> platformData)
     {
         var platforms = new List<GameObject>();
@@ -61,6 +77,11 @@ public static class LevelLoader
         return platforms;
     }
 
+    /// <summary>
+    /// Creates a list of <see cref="GameObject"/> instances representing collectibles based on the provided collectible data.
+    /// </summary>
+    /// <param name="collectibleData">A list of <see cref="CollectibleData"/> objects containing the collectible definitions.</param>
+    /// <returns>A list of <see cref="GameObject"/> instances representing the collectibles.</returns>
     public static List<GameObject> CreateCollectibles(List<CollectibleData> collectibleData)
     {
         var collectibles = new List<GameObject>();
@@ -76,6 +97,11 @@ public static class LevelLoader
         return collectibles;
     }
 
+    /// <summary>
+    /// Creates a list of <see cref="Enemy"/> instances based on the provided enemy data.
+    /// </summary>
+    /// <param name="enemyData">A list of <see cref="EnemyData"/> objects containing the enemy definitions.</param>
+    /// <returns>A list of <see cref="Enemy"/> instances representing the enemies.</returns>
     public static List<Enemy> CreateEnemies(List<EnemyData> enemyData)
     {
         var enemies = new List<Enemy>();

@@ -12,12 +12,23 @@ class Player : GameObject
     /// </summary>
     public Vector2 Velocity;
 
+    /// <summary>
+    /// The gravitational force applied to the player.
+    /// </summary>
     private const float Gravity = 0.5f;
+
+    /// <summary>
+    /// The force applied when the player jumps.
+    /// </summary>
     private const float JumpForce = -10f;
+
+    /// <summary>
+    /// The movement speed of the player.
+    /// </summary>
     private const float MoveSpeed = 5f;
 
     /// <summary>
-    /// Indicates whether the player is on the ground.
+    /// Indicates whether the player is currently on the ground.
     /// </summary>
     public bool IsOnGround;
 
@@ -28,32 +39,38 @@ class Player : GameObject
     public Player(Vector2 position) : base(position, new Vector2(40, 40), Raylib.RED) { }
 
     /// <summary>
-    /// Updates the player's state based on input and collisions.
+    /// Updates the player's state based on input, collisions, and interactions with objects in the game world.
     /// </summary>
     /// <param name="platforms">The list of platforms in the game.</param>
-    /// <param name="collectibles">The list of collectibles in the game.</param>
+    /// <param name="collectibles">The list of collectible items in the game.</param>
     /// <param name="enemies">The list of enemies in the game.</param>
-    /// <param name="collectedCount">The number of collectibles collected by the player.</param>
+    /// <param name="collectedCount">The number of collectibles collected by the player (passed by reference).</param>
     /// <param name="totalCollectibles">The total number of collectibles in the level.</param>
-    /// <returns>The current game state after updating.</returns>
+    /// <param name="collisionMessage">An output message describing any collisions detected.</param>
+    /// <returns>The current game state after updating (Playing, Won, or Lost).</returns>
     public GameState Update(List<GameObject> platforms, List<GameObject> collectibles, List<Enemy> enemies, ref int collectedCount, int totalCollectibles, out string collisionMessage)
     {
         collisionMessage = "";
 
+        // Apply gravity
         Velocity.Y += Gravity;
 
+        // Handle movement input
         if (Raylib.IsKeyDown(KeyboardKey.KEY_A)) Velocity.X = -MoveSpeed;
         else if (Raylib.IsKeyDown(KeyboardKey.KEY_D)) Velocity.X = MoveSpeed;
         else Velocity.X = 0;
 
+        // Handle jumping
         if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE) && IsOnGround)
         {
             Velocity.Y = JumpForce;
             IsOnGround = false;
         }
 
+        // Update position
         Position += Velocity;
 
+        // Check screen boundaries
         if (Position.X < 0)
         {
             Position.X = 0;
@@ -75,6 +92,7 @@ class Player : GameObject
             collisionMessage = "You hit the ground!";
         }
 
+        // Check collisions with platforms
         foreach (var platform in platforms)
         {
             if (CheckCollision(platform))
@@ -82,10 +100,10 @@ class Player : GameObject
                 Position.Y = platform.Position.Y - Size.Y;
                 IsOnGround = true;
                 Velocity.Y = 0;
-                // No collision message for platforms
             }
         }
 
+        // Check collisions with collectibles
         for (int i = collectibles.Count - 1; i >= 0; i--)
         {
             if (CheckCollision(collectibles[i]))
@@ -95,6 +113,7 @@ class Player : GameObject
             }
         }
 
+        // Check collisions with enemies
         for (int i = enemies.Count - 1; i >= 0; i--)
         {
             if (CheckCollision(enemies[i]))
@@ -102,7 +121,7 @@ class Player : GameObject
                 if (Velocity.Y > 0)
                 {
                     enemies.RemoveAt(i);
-                    Velocity.Y = JumpForce / 2;
+                    Velocity.Y = JumpForce / 2; // Bounce after defeating an enemy
                 }
                 else
                 {
@@ -112,13 +131,14 @@ class Player : GameObject
             }
         }
 
+        // Determine game state
         return collectedCount == totalCollectibles ? GameState.Won : GameState.Playing;
     }
 
     /// <summary>
-    /// Checks for collision between the player and another game object.
+    /// Checks for a collision between the player and another game object.
     /// </summary>
-    /// <param name="obj">The game object to check for collision with.</param>
+    /// <param name="obj">The game object to check for collision.</param>
     /// <returns>True if a collision occurs, otherwise false.</returns>
     private bool CheckCollision(GameObject obj)
     {

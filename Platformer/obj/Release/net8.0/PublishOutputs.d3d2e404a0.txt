@@ -1,0 +1,16 @@
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\Platformer.exe
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\Platformer.dll
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\Platformer.deps.json
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\Platformer.runtimeconfig.json
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\Platformer.pdb
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\Microsoft.Toolkit.HighPerformance.dll
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\Raylib-CsLo.dll
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\linux-x64\native\libraylib.so
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\linux-x64\native\readme.md
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\osx-arm64\native\libraylib.dylib
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\osx-arm64\native\readme.md
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\osx-x64\native\libraylib.dylib
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\osx-x64\native\readme.md
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\win-x64\native\raylib.dll
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\win-x64\native\raylib.pdb
+C:\.net\osa_4\Platformer\Platformer\bin\Release\net8.0\publish\runtimes\win-x86\native\needs-pr.txt
